@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>opal's website</title>
+    <title>opal.moe • projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -31,11 +31,65 @@
             <a href="about.html">about</a>
         </nav>
         <div class="content-stack">
-            <main class="content">
-                <h2>New Project Coming Soon!</h2>
+            <main class="content" id="konatube">
+                <h2>Update: KonaTube</h2>
+                <p><em>Nov 2026</em></p>
                 <p>
-                    When i eventually feel the urge to be productive i will put something here. Maybe I should add some
-                    sort of blog section.
+                    I made an iPhone app! KonaTube is basically just mobile YouTube (m.youtube.com) in a
+                    window, with injected scripts that strip out Shorts and ads and keep audio playing in the
+                    background or with the screen locked. SponsorBlock is built in too (it's supposed to work,
+                    but idk).
+                </p>
+                <p>
+                    The native part is about 200 lines of Objective-C; the rest is a list of blocking rules
+                    and five scripts, around 600 lines all together. I build it on Linux without Apple's SDK,
+                    so no Mac needed. For a while it kept logging me out of YouTube every time I closed it,
+                    until I made it back up the cookies.
+                </p>
+                <p>
+                    Source is on <a href="https://github.com/kzopal/konatube">github</a> (AGPL-3.0), and the
+                    .ipa is under <a href="https://github.com/kzopal/konatube/releases">releases</a> if you
+                    want to sideload it.
+                </p>
+            </main>
+            <main class="content" id="csweb">
+                <h2>csweb</h2>
+                <p><em>Oct 2026</em></p>
+                <p>
+                    Counter-Strike 1.6 running in a browser, from a single local HTML file. I made it so it
+                    would run on school Chromebooks, where you can't install anything. It uses the open-source
+                    Xash3D engine compiled to WebAssembly, and the maps, models and sounds come from your own
+                    copy of the game, so none of Valve's files are in the repo.
+                </p>
+                <p>
+                    Online play kinda works, but it's finicky and breaks half the time. Players connect
+                    straight to each other over WebRTC, and there's a server list and YaPB bots. Browsers can't send raw UDP though, so you can't join real
+                    CS 1.6 servers, only other people running the page.
+                </p>
+                <p>
+                    It's not public yet, so no link for now.
+                </p>
+            </main>
+            <main class="content">
+                <h2>Fast, Analog Inference</h2>
+                <p><em>Sep 2026</em></p>
+                <p>
+                    I was thinking the other day that it should be possible to speed up neural network inference
+                    with analog circuits. The problem is that a useful model needs so many dimensions that building
+                    it in analog would cost far more than ordinary digital hardware. Maybe more thought is
+                    warranted.
+                </p>
+            </main>
+            <main class="content" id="setup">
+                <h2>My Linux setup</h2>
+                <p>
+                    My main PC runs Debian sid on a Ryzen 9 9900X with an RTX 5070. My laptop is a ThinkPad
+                    T480 on Trisquel, which is fully free software, running i3.
+                </p>
+                <p>
+                    I also made <a href="https://github.com/kzopal/setup">setup</a>, which strips Ubuntu 24.04
+                    down to a clean i3 install (it's a fork of ubuntu-debullshit). It only targets 24.04, and
+                    a few features are still broken.
                 </p>
             </main>
         </div>
@@ -50,9 +104,11 @@
             </a>
             <img src="/media/img/gnu-linux.gif" alt="gnu/linux">
             <img src="/media/img/gplv3.gif" alt="gplv3">
-            <img src="/media/img/caramelldansen.gif" alt="caramelldansen">
             <a href="https://github.com/gorhill/uBlock" target="_blank" rel="noopener">
                 <img src="/media/img/ublock-now.png" alt="ublock origin now!">
+            </a>
+            <a href="https://i3wm.org/" target="_blank" rel="noopener">
+                <img src="/media/img/i3wm-logo-200x40.gif" alt="i3 window manager">
             </a>
         </div>
         <div class="footer-copyright">
